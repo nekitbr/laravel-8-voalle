@@ -69,8 +69,6 @@ class VendaController extends Controller
 
         $pdf = PDF::loadView('export-sale-pdf', compact('buyer', 'seller', 'sellable'))->setOptions(['defaultFont' => 'sans-serif']);
         return $pdf->stream('test.pdf');
-
-        return abort(404);
     }
  
     public function getProduto(Produto $product_id) {

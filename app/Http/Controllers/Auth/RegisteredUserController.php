@@ -49,6 +49,6 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        return redirect('/admins')->with('success', "User {$data['name']} created successfully.");
+        return redirect('/welcome')->with('success', "User {$data['name']} created successfully.");
     }
 }

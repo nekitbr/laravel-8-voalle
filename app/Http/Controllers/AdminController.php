@@ -61,6 +61,10 @@ class AdminController extends Controller
             'role' => 'sometimes',
         ]);
 
+        if (!$data['password']) {
+            unset($data['password']);
+        }
+
         $user->update($data);
 
         return redirect("/admins/edit/{$user->id}")->with('success', 'Update successful');
