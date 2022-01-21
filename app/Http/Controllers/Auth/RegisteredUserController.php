@@ -49,6 +49,6 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        return redirect('/welcome')->with('success', "User {$data['name']} created successfully.");
+        return redirect('/verify-email')->with('success', "User {$data['name']} created successfully.");
     }
 }
